@@ -1,14 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
+:root{   
+    --geral-font: "Delius", cursive; 
+    --bg: #FAF9F6;
+    --bg2: #fff;
+    --letra:#333333;
+    --black:#444;
+    --botao:#6f41c5;
+    --border: .1rem solid rgba(0,0,0,.1);
+    --border-hover: .1rem solid var(--black);
+    --box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     border: none;
+    outline: none;
+    transition: all .2s linear;
+    transition: width none;
+    font-family: var(--geral-font);
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5rem;
+    scroll-behavior: smooth;
+}
+.section{
+    margin: 2rem;
+    padding: 2rem;
+}
+
+.heading{
+    font-size: 3rem;
+    color: var(--botao);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    background: var(--botao);
+    box-shadow: var(--box-shadow);
+}
+.header a{
+    font-size: 2rem;
+    color: var(--bg);
+    margin: 1rem;
+}
+.header a:hover{
+    color: var(--black);
 }
 .box{
+    margin: 1rem 0;
+    padding: 1.4rem;
+    border-radius: .5rem;
+    background-color: var(--bg2);
+    box-shadow: var(--box-shadow);
+    border: var(--border);
+    font-size: 1.8rem;
+    color: var(--letra);
+    width: 100%;
+}
+.clientes, 
+.produtos{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: black;
-    color: aliceblue;
+    height: calc(100vh - 15rem);
+}
+
+.clientes .box table {
+    margin: 1rem 0;
+    padding: 1.4rem;
+    border-radius: .5rem;
+    background-color: var(--bg2);
+    box-shadow: var(--box-shadow);
+    border: var(--border);
+    font-size: 1.8rem;
+    color: var(--letra);
+    width: 100%;
+    text-align: center;
+}
+.clientes .box:hover table{
+    border: var(--border-hover);
+}
+
+.clientes .box table tr th{
+    color: var(--botao);
+    width: fit-content;   
+    margin: 4px;
+    padding: 4px;
+    border: var(--border);
+}
+.clientes .box table tr td{
+    color: var(--botao);
+    width: fit-content;
+    border: var(--border);
+    color: var(--letra);
+    margin: 4px;
+    padding: 4px;
+}
+
+.produtos .box table {
+    margin: 1rem 0;
+    padding: 1.4rem;
+    border-radius: .5rem;
+    background-color: var(--bg2);
+    box-shadow: var(--box-shadow);
+    border: var(--border);
+    font-size: 1.8rem;
+    color: var(--letra);
+    width: 100%;
+    text-align: center;
+}
+.produtos .box:hover table{
+    border: var(--border-hover);
+}
+
+.produtos .box table tr th{
+    color: var(--botao);
+    width: fit-content;   
+    margin: 4px;
+    padding: 4px;
+    border: var(--border);
+}
+.clientes .box table tr td{
+    color: var(--botao);
+    width: fit-content;
+    border: var(--border);
+    color: var(--letra);
+    margin: 4px;
+    padding: 4px;
+}
+
+footer{
+    font-size: 2rem;
+    color: var(--letra);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer a{
+    margin-bottom: -.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
