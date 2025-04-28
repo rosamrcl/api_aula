@@ -59,12 +59,12 @@ class api_logic
     // --------------------------------------------------
     public function get_all_products()
     {
+        $db = new database();
+        $results = $db->EXE_QUERY("SELECT * FROM produtos");
         return [
             'status' => 'SUCCESS',
             'message' => '',
-            'results' => [
-                'laranjas','bananas','martelo','parafuso'
-            ]
+            'results' =>$results
         ];
     }
 }
