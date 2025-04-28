@@ -47,12 +47,12 @@ class api_logic
     // --------------------------------------------------
     public function get_all_clients()
     {
+        $db = new database();
+        $results = $db->EXE_QUERY("SELECT * FROM clientes");
         return [
             'status' => 'SUCCESS',
             'message' => '',
-            'results' => [
-                'joao','ana','pedro','antónio'
-            ]
+            'results' => $results
         ];
     }
 
