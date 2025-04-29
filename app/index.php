@@ -67,8 +67,8 @@ require_once('inc/api_functions.php');
             $results = api_request('get_all_clients', 'GET');?>
             <?php foreach($results['data']['results'] as $client) :?>
             <tr>
-                <td><?=$client['id_cliente']?></td>
-                <td><?=$client['nome']?></td>
+                <td><?=$client['id_client']?></td>
+                <td><?=$client['name']?></td>
                 <td><?=$client['email']?></td>
                 <td><?=$client['tel']?></td>
                 <td><?=$client['created_at']?></td>
@@ -80,27 +80,31 @@ require_once('inc/api_functions.php');
 </section>
 <section class="produtos" id="produtos">
     <div class="box">
+        <h1 class="heading">Produtos Cadastrados</h1>
         <table>
             <tr>
                 <th>ID</th>
                 <th>Produto</th>
-                <th>Quantidade</th>
+                <th>Preço</th>
+                <th>Quantidade</th>                
                 <th>Criação</th>
             </tr>
+            <?php
+            $results = api_request('get_all_products', 'GET');?>
+            <?php foreach($results['data']['results'] as $product) :?>
+            <tr>
+                <td><?=$product['id_produto']?></td>
+                <td><?=$product['produto']?></td>
+                <td><?=$product['preco']?></td>
+                <td><?=$product['quantidade']?></td>
+                <td><?=$product['created_at']?></td>
+            </tr>
+            <?php endforeach; ?>
+
         </table>
-        <?php
-        $results = api_request('get_all_products', 'GET');
-        foreach($results['data']['results'] as $product):
-        ?>
-        <tr>
-            <td><?=$product['id_produto']?></td>
-            <td><?=$product['produto']?></td>
-            <td><?=$product['quantidade']?></td>
-            <td><?=$product['created_at']?></td>
-        </tr>
-        <?php endforeach;?>    
     </div>
-</section>   
+</section>
+
 <footer>
     <a href="https://github.com/RosaCL" target="_blank"><img
     src="./inc/img/costureza.png" alt=""></a>

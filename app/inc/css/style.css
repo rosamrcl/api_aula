@@ -71,10 +71,9 @@ html{
     border: var(--border);
     font-size: 1.8rem;
     color: var(--letra);
-    width: 100%;
+    width: 100%;   
 }
-.clientes, 
-.produtos{
+.clientes{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -112,6 +111,12 @@ html{
     margin: 4px;
     padding: 4px;
 }
+.produtos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 15rem);
+}
 
 .produtos .box table {
     margin: 1rem 0;
@@ -136,7 +141,7 @@ html{
     padding: 4px;
     border: var(--border);
 }
-.clientes .box table tr td{
+.produtos .box table tr td{
     color: var(--botao);
     width: fit-content;
     border: var(--border);
