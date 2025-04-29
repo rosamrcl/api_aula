@@ -64,8 +64,7 @@ require_once('inc/api_functions.php');
                 <th>Telefone</th>
                 <th>Criação</th>
             </tr>
-            <?php
-            $results = api_request('get_all_clients', 'GET');?>
+            <?php $results = api_request('get_all_clients', 'GET');?>
             <?php foreach($results['data']['results'] as $client) :?>
             <tr>
                 <td><?=$client['id_client']?></td>
