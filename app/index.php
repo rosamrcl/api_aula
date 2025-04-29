@@ -42,11 +42,12 @@ require_once('inc/api_functions.php');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./inc/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Loja</title>
 </head>
 <body>
 <header class="header">    
-        <a href="#" class="logo">Loja</a>
+        <a href="#"><i class="fa-solid fa-hippo"></i></a>
         <nav class="navbar">
         <a href="#clientes">Todos os clientes</a>        
         <a href="#produtos">Todos os produtos</a>          
@@ -54,7 +55,7 @@ require_once('inc/api_functions.php');
 </header>
 <section class="clientes" id="clientes">
     <div class="box">
-        <h1 class="heading">Clientes Cadastrados</h1>
+        <h1 class="heading">Clientes Cadastrados <i class="fa-solid fa-hippo"></i></h1>
         <table>
             <tr>
                 <th>ID</th>
@@ -80,7 +81,7 @@ require_once('inc/api_functions.php');
 </section>
 <section class="produtos" id="produtos">
     <div class="box">
-        <h1 class="heading">Produtos Cadastrados</h1>
+        <h1 class="heading">Produtos Cadastrados <i class="fa-solid fa-hippo"></i></h1>
         <table>
             <tr>
                 <th>ID</th>
