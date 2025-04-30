@@ -95,7 +95,7 @@ require_once('inc/api_functions.php');
             <tr>
                 <td><?=$product['id_produto']?></td>
                 <td><?=$product['produto']?></td>
-                <td><?=$product['preco']?></td>
+                <td>R$<?=$product['preco']?></td>
                 <td><?=$product['quantidade']?></td>
                 <td><?=$product['created_at']?></td>
             </tr>
